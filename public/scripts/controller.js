@@ -111,7 +111,7 @@ app.controller('ctrl',function($scope,$window,$http,$timeout,$sce,memory){
 				}
 			}
 			//-------------------------------//
-			urlstr="http://www.omdbapi.com/?t="+$scope.mtitle+"&y="+year+"&plot=full&apikey=c5a510c3";
+			urlstr="https://www.omdbapi.com/?t="+$scope.mtitle+"&y="+year+"&plot=full&apikey=c5a510c3";
 		}
 
 		$scope.sbuttonmsg="Fetching...";
