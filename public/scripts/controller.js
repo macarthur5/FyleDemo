@@ -100,7 +100,7 @@ app.controller('ctrl',function($scope,$window,$http,$timeout,$sce,memory){
 		}
 		var urlstr="";
 		if(year.length===0){
-			urlstr="http://www.omdbapi.com/?t="+title+"&plot=full&apikey=c5a510c3";
+			urlstr="https://www.omdbapi.com/?t="+title+"&plot=full&apikey=c5a510c3";
 		}else{
 			for(var i=0;i<year.length;++i){
 				var code=year.charCodeAt(i);
