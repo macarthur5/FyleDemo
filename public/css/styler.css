@@ -1,0 +1,271 @@
+
+body{
+	background-color:rgb(0,0,0);
+	overflow-y:auto;
+}
+
+#maindiv{
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	z-index:2;
+	height:100%;
+	overflow-y:scroll;
+	background-color:rgb(0,0,0,0.3);
+}
+
+#backgroundimage{
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	z-index:1;
+	background-image:url('mpic.jpg');
+	background-size:cover;
+	filter:blur(13px);
+}
+
+#toastdiv{
+	position:fixed;
+	width:0px;
+	height:42px;
+	top:-50px;
+	left:50%;
+	z-index:3;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+	
+    flex-wrap: nowrap;
+    font-size: 21px;
+    color: rgb(240,240,240);
+    border-radius: 3px;
+    text-align: center;
+	font-family: 'Niramit', sans-serif;
+	opacity: 0.0;
+}
+
+#divider{
+	width:80%;
+	margin-left:10%;
+	height:1px;
+	background-color:rgb(240,240,240);
+	margin-top:15px;
+	margin-bottom:15px;
+	box-shadow:1px 1px 1px 1px rgb(220,220,220);
+}
+
+#searchherediv{
+	display:flex;
+	flex-direction:column;
+	flex-wrap:nowrap;
+	justify-content:flex-start;
+	align-items:center;
+	width:98%;
+	margin-left:1%;
+	height:auto;
+	margin-top:50px;
+	margin-bottom:25px;
+}
+
+#sboxdiv{
+	width:75%;
+	height:50px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:flex-start;
+	margin-bottom:20px;
+}
+
+#ysubboxdiv{
+	width:98%;
+	height:50px;
+	margin-left:1%;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+}
+
+#simagediv{
+	width:50px;
+	height:100%;
+	background-color:rgb(4,53,102);
+	text-align:center;
+	border-left:1px solid rgb(0,0,0);
+	transition: background-color 1s;
+}
+
+#simagediv:hover{
+	background-color:rgb(150,0,0);
+	cursor:pointer;
+}
+
+#lens{
+	width:32px;
+	height:32px;
+	margin-top:9px;
+}
+
+#sbox{
+	width:100%;
+	height:44px;
+	font-size:22px;
+	font-family: 'Niramit', sans-serif;
+	padding-left:11px;
+	padding-right:11px;
+}
+
+#yboxdiv{
+	width:175px;
+	height:50px;
+	margin-right:75px;
+}
+
+#ybox{
+	width:100%;
+	height:44px;
+	font-size:22px;
+	font-family: 'Niramit', sans-serif;
+	padding-left:11px;
+	padding-right:11px;
+}
+
+#submitdiv{
+	width:250px;
+	height:51px;
+}
+
+#submitbutton{
+	font-family: 'Niramit', sans-serif;
+	width:100%;
+	font-size:24px;
+	height:100%;
+	background-color:rgb(4,53,102);
+	color:rgb(250,250,250);
+	border:1px solid rgb(0,0,0);
+	transition: background-color 1s;
+}
+
+#submitbutton:hover{
+	cursor:pointer;
+	background-color: rgb(150,0,0);
+}
+
+#pastsearchdiv{
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	align-items:center;
+	overflow-y:hidden;
+}
+
+#nopastrecdiv{
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	align-items:center;
+	margin-top:50px;
+}
+
+#norecmsg{
+	font-size:23px;
+	margin-top:10px;
+	font-family: 'Niramit', sans-serif;
+	color:rgb(250,250,250);
+}
+
+#pastrecholder{
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:flex-start;
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:25px;
+}
+
+.pastrecdiv{
+	width:94%;
+	height:120px;
+	margin-left:3%;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:flex-start;
+	margin-bottom:3px;
+	background-color:rgba(20,20,20,0.85);
+	border-radius:3px;
+	border:1px solid rgb(100,100,100);
+	transition: background-color 0.5s, border 0.5s;
+}
+
+.pastrecdiv:hover{
+	background-color:rgb(4,53,102);
+	border:1px solid rgb(250,250,250);
+	cursor:pointer;
+}
+
+.rposterdiv{
+	width:10%;
+	height:100%;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+
+.rcontentdiv{
+	width:80%;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:flex-start;
+	margin-left:15px;
+	margin-right:15px;
+	font-family: 'Niramit', sans-serif;
+	color:rgb(250,250,250);
+}
+
+.rtitle{
+	font-size:18px;
+	margin-top:10px;
+	margin-bottom:7px;
+}
+
+.rlangcont{
+	font-size:15px;
+	margin-top:-8px;
+}
+
+.rrdate{
+	font-size:15px;
+	margin-top:-8px;
+}
+
+.rgenre{
+	font-size:15px;
+	margin-top:-8px;
+}
+
+.rrating{
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:center;
+	font-size:15px;
+	margin-top:-13px;
+	margin-bottom:13px;
+}
+
+.rposter{
+	border:1px solid rgb(250,250,250);
+	padding:2px;
+}

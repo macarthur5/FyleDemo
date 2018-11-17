@@ -1,0 +1,22 @@
+{
+  "name": "fyledemo",
+  "version": "0.1.0",
+  "description": "A website built with Node, Express and Pug",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Martand Chauhan",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "pm2": "^2.10.3"
+  },
+  "engines":{
+	"node":"11.2.0",
+	"npm":"6.4.1"
+  }
+}

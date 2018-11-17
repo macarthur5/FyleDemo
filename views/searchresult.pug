@@ -1,0 +1,75 @@
+html
+  head
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js')
+    link(rel='stylesheet', href='./css/resultstyler.css')
+    link(href='https://fonts.googleapis.com/css?family=Niramit', rel='stylesheet')
+  body(ng-app='app', ng-controller='ctrl')
+    #backgroundimage(ng-style='backgstyle')
+    | &#x9;
+    #maindiv
+      #posterdiv
+        #gobackmsg Press esc to go back
+        | &#x9;&#x9;
+        | &#x9;&#x9;&#x9;
+        #posterimagediv(ng-bind-html='posterimagedivcontent')
+        | &#x9;&#x9;&#x9;
+        | &#x9;&#x9;&#x9;
+        #plotbuttondiv
+          button#plotbutton(ng-click='showplot()', ng-style='plotbutstyle', ng-mouseenter='transitmover()', ng-mouseleave='transitmout()') Plot
+      | &#x9;&#x9;
+      | &#x9;&#x9;
+      #contentdiv
+        #movietitle(ng-bind-html='movietitle')
+        | &#x9;&#x9;&#x9;
+        #releasedate(ng-bind-html='releasedate')
+        | &#x9;&#x9;&#x9;
+        #genre(ng-bind-html='genre')
+        | &#x9;&#x9;&#x9;
+        #langandcountry(ng-bind-html='langandcountry')
+        | &#x9;&#x9;&#x9;
+        #ratings
+          #imdbrating.ratingdiv
+            .ratingimagediv
+              img(src='https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg', alt='imdb', width='32', height='32')
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            div
+              span.ratingvalspan(ng-bind-html='imdbscore') --
+          | &#x9;&#x9;&#x9;&#x9;
+          .rdivider
+          | &#x9;&#x9;&#x9;&#x9;
+          #metacriticrating.ratingdiv
+            .ratingimagediv
+              img(src='https://upload.wikimedia.org/wikipedia/commons/2/20/Metacritic.svg', alt='meta', width='32', height='32')
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            div
+              span.ratingvalspan(ng-bind-html='metascore') --
+          | &#x9;&#x9;&#x9;&#x9;
+          .rdivider
+          | &#x9;&#x9;&#x9;&#x9;
+          #rottentomatoesrating.ratingdiv
+            .ratingimagediv
+              img(src='https://upload.wikimedia.org/wikipedia/commons/5/5b/Rotten_Tomatoes.svg', alt='rt', width='32', height='32')
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            div
+              span.ratingvalspan(ng-bind-html='rtscore') --
+        | &#x9;&#x9;&#x9;
+        | &#x9;&#x9;&#x9;
+        #dwadiv
+          table
+            tbody
+              tr(ng-repeat='ob in tabledata')
+                td.typelabel {{ob.title}}
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                td.typevalue(id='value-{{$index}}', ng-if='$index===9', ng-click='openwebsite()') {{ob.value}}
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                td.typevalue(id='value-{{$index}}', ng-if='$index < 9') {{ob.value}}
+        | &#x9;&#x9;&#x9;
+        | &#x9;&#x9;&#x9;
+        div(style='width:96%;height:25px;margin-left:2%;') &nbsp;
+        | &#x9;&#x9;&#x9;
+        div(style='width:96%;height:25px;margin-left:2%;') &nbsp;
+    | &#x9;
+    | &#x9;
+    script(src='./scripts/resultcontroller.js')

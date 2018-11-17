@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js')
+    link(rel='stylesheet', href='./css/styler.css')
+    link(href='https://fonts.googleapis.com/css?family=Niramit', rel='stylesheet')
+  body
+    #toastdiv(ng-bind-html='toastmessagecontent')
+    #backgroundimage
+    #maindiv(ng-app='app', ng-controller='ctrl')
+      #searchherediv
+        #sboxdiv
+          input#sbox(type='text', maxlength='60', placeholder='Movie title e.g. The Godfather', ng-model='mtitle', list='pastskeywords')
+          | &#x9;
+          datalist#pastskeywords
+        #ysubboxdiv
+          #yboxdiv
+            input#ybox(type='text', placeholder='Year', ng-model='myear')
+          | &#x9;
+          #submitdiv
+            button#submitbutton(ng-click='searchmovie()', ng-bind-html='sbuttonmsg')
+      #divider
+      #pastsearchdiv(ng-bind-html='pastsearchcontent')
+    script(src='./scripts/controller.js')
