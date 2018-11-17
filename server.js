@@ -14,5 +14,5 @@ app.get('/searchresult', (req,res) =>{
 });
 
 const server=app.listen( process.env.PORT||8080,()=>{
-	console.log('express running );
+	console.log('express running');
 });
