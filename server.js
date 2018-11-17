@@ -13,6 +13,6 @@ app.get('/searchresult', (req,res) =>{
 	res.render('searchresult');
 });
 
-const server=app.listen(8080,()=>{
-	console.log('express running on port 8080');
+const server=app.listen( process.env.PORT||8080,()=>{
+	console.log('express running );
 });
